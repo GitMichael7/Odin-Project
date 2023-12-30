@@ -1,0 +1,17 @@
+.Click.No {
+    font-size: 28px;
+    font-family: Helvetica, 'Times New Roman', sans-serif;
+    display: inline-block; /* or use float: left; */
+    width: 48%; /* adjust width as needed */
+    margin-right: 2%; /* adjust margin as needed */
+    vertical-align: top; /* align paragraphs at the top */
+}
+
+.Click {
+    background-color: black;
+    color: white;
+}
+
+.No {
+    background-color: yellow;
+}
