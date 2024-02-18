@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: lightgrey;
+    min-width: 25px;
+    min-height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
