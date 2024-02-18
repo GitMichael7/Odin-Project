@@ -4,13 +4,21 @@ function getComputerChoice() {
     return moves[randomIndex];
 }
 
-let tie = "It's a tie, play again!";
-let win = "You won, Congratulations!";
-let lost = "You lost :(";
+const tie = "It's a tie, play again!";
+const win = "You won, Congratulations!";
+const lost = "You lost :(";
 
 let playerScore = 0;
 let computerScore = 0;
 
+const rock = document.querySelector('.rock');
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+
+const player = document.querySelector(".playerscore");
+const computer = document.querySelector(".computerscore");
+
+let div = document.querySelector("div");
 
 function playRound(playerSelection, computerSelection) {
     
@@ -18,15 +26,17 @@ function playRound(playerSelection, computerSelection) {
         case "rock":
             switch (computerSelection) {
                 case "rock":
-                    console.log(tie);
+                    div.textContent = tie;
                     break;
                 case "paper":
-                    console.log(lost);
+                    div.textContent = lost;
                     computerScore++;
+                    computer.textContent = computerScore;
                     break;
                 case "scissors":
-                    console.log(win);
+                    div.textContent = win;
                     playerScore++;
+                    player.textContent = playerScore;
                     break;
             }
             break;
@@ -34,15 +44,17 @@ function playRound(playerSelection, computerSelection) {
         case "paper":
             switch (computerSelection) {
                 case "rock":
-                    console.log(win);
+                    div.textContent = win;
                     playerScore++;
+                    player.textContent = playerScore;
                     break;
                 case "paper":
-                    console.log(tie);
+                    div.textContent = tie;
                     break;
                 case "scissors":
-                    console.log(lost);
+                    div.textContent = lost;
                     computerScore++;
+                    computer.textContent = computerScore;
                     break;
             }
             break;
@@ -50,36 +62,41 @@ function playRound(playerSelection, computerSelection) {
         case "scissors":
             switch (computerSelection) {
                 case "rock":
-                    console.log(lost);
+                    div.textContent = lost;
                     computerScore++;
+                    computer.textContent = computerScore;
                     break;
                 case "paper":
-                    console.log(win);
+                    div.textContent = win;
                     playerScore++;
+                    player.textContent = playerScore;
                     break;
                 case "scissors":
-                    console.log(tie);
+                    div.textContent = tie;
                     break;
             }
             break;
 
         default:
-            console.log("Invalid input. Please type: rock, paper, or scissors");
+            div.textContent = "Invalid input. Please type: rock, paper, or scissors";
             break;
     }
+
+
 }
 
-function game() {
-    
-    /// if someone gets a score of 3 break loop
-    while ( playerScore < 3 || computerScore < 3 ) {
-        let playerSelection = prompt("Type: rock, paper, or scissors");
-        let computerSelection = getComputerChoice();
-        
-        playRound(playerSelection, computerSelection);
-    }
-}
 
-game()
 
+rock.addEventListener("click", () => {
+    let computerSelection = getComputerChoice();
+    playRound("rock", computerSelection)
+} ) 
+paper.addEventListener("click", () => {
+    let computerSelection = getComputerChoice();
+    playRound("paper", computerSelection)
+} ) 
+scissors.addEventListener("click", () => {
+    let computerSelection = getComputerChoice();
+    playRound("scissors", computerSelection)
+} ) 
 
