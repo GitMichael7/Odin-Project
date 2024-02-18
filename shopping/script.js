@@ -2,9 +2,6 @@ const btn = document.querySelector('button');
 const ul = document.querySelector("ul");
 
 
-const listText = document.createElement('span');
-const listBtn = document.createElement('button');
-
 btn.onclick = () => {
     const inputElement = document.getElementById("item");
     const inputValue = inputElement.value;
@@ -18,7 +15,7 @@ btn.onclick = () => {
     listText.textContent = inputValue;
 
     listBtn.onclick = () => {
-        listText.textContent = "";
+        ul.removeChild(content);
     }
 
     

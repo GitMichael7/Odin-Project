@@ -5,11 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="javascript.js" defer></script>
   <title>Document</title>
+  <style>
+  .container {
+    display: flex;
+    margin-right: 20px;
+  }
+  </style>
 </head>
 <body>
-  <div id="container"></div>
-
-  <button onclick="alert('Hello World')">Click Me</button>
-  <button id="btn">Click Me Too</button>
+  <button class="btn">Click Me Too</button>
+  <div class="container">
+    <div>Playerscore:</div>
+    <div class="playerscore:">0</div>
+  </div>
+  <div class="container">
+    <div>Computerscore:</div>
+    <div class="computerscore:">0</div>
+  </div>
 </body>
 </html>
