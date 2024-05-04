@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url("images/Norse-Bold.otf");
+  }
+  
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    
+}
+
+.leaves {
+padding: 250px;
+max-width: 250px;
+padding-bottom: 600px;
+background-image: url(images/Leaves-odin.avif);
+background-size: auto 140%;
+
+}
+
+.account {
+    padding: 100px;
+}
+
+.odinbox {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin: 0;
+    position: absolute;
+    bottom: 50px;
+    font-family: "Norse-Bold", sans-serif;
+    font-size: 60px;
+    padding-top: 15px;
+    padding-left: 175px;
+    padding-right: 184px;
+    margin: 0;
+    bottom: 500px;
+    left: 0px;
+    display: flex;
+
+}
+
+.odinpic {
+    background-image: url(images/odin-lined.png);
+}
+

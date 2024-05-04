@@ -1,0 +1,60 @@
+.container {
+    margin: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+    padding: 6px;
+    width: 155px;
+    margin-top: 150px;
+    border-radius: 10px;
+    
+    
+}
+
+button {
+   flex: 0 0 0;
+   margin: 1px;
+   padding: 10px;
+   min-width: 36px;
+   border-radius: 5px;
+   background-color: rgb(251, 210, 163);
+   color: white; 
+}
+
+.equals {
+    background-color: lightblue;
+}
+
+.plus, .minus, .multi, .division, .AC, .Backspace {
+    background-color: orange;
+}
+
+.screen {
+
+    width: 150px;
+    height: 80px;
+    background-color: white;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 5px;
+    background-color: rgb(49, 48, 48);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Backspace,.AC {
+    padding: 10px 35.5px;
+    text-align: center;
+
+}
+
+.sum {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items:end;
+    margin-right: 2px;
+    font-size: 30px;
+}
