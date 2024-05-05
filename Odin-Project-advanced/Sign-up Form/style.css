@@ -22,6 +22,7 @@ max-width: 250px;
 padding-bottom: 600px;
 background-image: url(images/Leaves-odin.avif);
 background-size: auto 140%;
+margin: 0;
 
 }
 
@@ -51,3 +52,56 @@ background-size: auto 140%;
     background-image: url(images/odin-lined.png);
 }
 
+.account {
+    padding: 0px;
+    margin: 0;
+}
+
+.top-box {
+    font-weight: bold;
+    background-color: rgb(210, 207, 207);
+    padding: 100px;
+    margin: 0;
+    padding-top: 120px;
+    padding-left: 40px;
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    margin-top: 20px; /* Optional margin */
+}
+
+.form-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.flex-form {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping */
+}
+
+.form-row {
+    display: flex;
+    flex-basis: 50%; /* Each row takes up 50% of the container width */
+}
+
+.form-field {
+    margin-right: 10px; /* Optional margin between fields */
+    margin-bottom: 15px;
+    flex: 1; /* Each field takes up equal space within the row */
+}
+
+.form-field label {
+    font-weight: bold;
+}
+
+.form-field input {
+    width: 100%; /* Optional: Make inputs take full width */
+}
