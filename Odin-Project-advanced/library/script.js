@@ -2,12 +2,15 @@ const myLibrary = [];
 const New = document.querySelector(".new");
 
 
-function Book() {
-
+function Book(name, title, pages, read ) {
+this.name = name;
+this.title = title;
+this.pages = pages;
+this.read = read;
 }
 
-function addBookToLibrary() {
-
+function addBookToLibrary(book) {
+ myLibrary.push(book)
 }
 
 
@@ -65,6 +68,9 @@ New.addEventListener("click", () => {
     console.log(pagesData)
     console.log(readData)
 
-
+    const newBook = new Book(nameData, titleData, pagesData, readData)
+    addBookToLibrary(newBook)
+    console.log(myLibrary);
+    form.reset();
   })
 })
