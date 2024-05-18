@@ -1,0 +1,56 @@
+.carousel img {
+    height: 300px;
+    width: 300px;
+    border-radius: 5%;
+}
+
+
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons img {
+    height: 30px;
+    width: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.point {
+    width: 12px; /* Adjust size as needed */
+    height: 12px; /* Adjust size as needed */
+    background-color: #ccc; /* Grey color */
+    border-radius: 50%; /* Circular shape */
+}
+
+#PThree {
+    background-color: purple;
+}
+
+.buttons {
+    display:flex;
+    justify-content: center;
+}
+
+.point {
+    margin: 2px;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.right {
+    margin-top: 1px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
