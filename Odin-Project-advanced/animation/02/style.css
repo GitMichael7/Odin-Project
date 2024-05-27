@@ -1,33 +1,32 @@
-
 * {
     padding: 0;
     margin: 0;
-  }
-  
-  body {
+}
+
+body {
     overflow: hidden;
-  }
-  
-  .button-container {
+}
+
+.button-container {
     width: 100vw;
     height: 100vh;
     background-color: #ffffff;
-    opacity: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  button {
+}
+
+button {
     padding: 20px;
     color: #ffffff;
     background-color: #0e79dd;
     border: none;
     border-radius: 5px;
     font-weight: 600;
-  }
-  
-  .popup-modal {
+    cursor: pointer;
+}
+
+.popup-modal {
     padding: 32px 64px;
     background-color: white;
     border: 1px solid black;
@@ -35,31 +34,33 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform-origin: center;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -200%);
     pointer-events: none;
-    opacity: 0%;
+    opacity: 0;
     text-align: center;
-  }
-  
-  .popup-modal p {
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.popup-modal p {
     margin-bottom: 24px;
-  }
-  
-  .backdrop {
+}
+
+.backdrop {
     pointer-events: none;
     position: fixed;
     inset: 0;
     background: #000;
-    opacity: 0%;
-  }
-  
-  .popup-modal.show {
-    opacity: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.popup-modal.show {
+    opacity: 1;
     pointer-events: all;
-  }
-  
-  .backdrop.show {
-    opacity: 30%;
-  }
-  
+    transform: translate(-50%, -50%);
+}
+
+.backdrop.show {
+    opacity: 0.3;
+    pointer-events: all;
+}
