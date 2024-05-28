@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown Bounce Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .dropdown-container {
+        position: relative;
+      }
+
+      .dropdown-button {
+        padding: 10px 20px;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .dropdown-list {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 200px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease-out;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .dropdown-list.show {
+        transform: scaleY(1);
+        opacity: 1;
+        pointer-events: auto;
+        animation: bounce 0.6s;
+      }
+
+      .dropdown-list li {
+        list-style: none;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .dropdown-list li:last-child {
+        border-bottom: none;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: scaleY(0);
+        }
+        60% {
+          transform: scaleY(1.2);
+        }
+        80% {
+          transform: scaleY(0.95);
+        }
+        100% {
+          transform: scaleY(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown-container">
+      <button class="dropdown-button" onclick="toggleDropdown()">
+        Toggle Dropdown
+      </button>
+      <ul class="dropdown-list" id="dropdown-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleDropdown() {
+        const dropdownList = document.getElementById("dropdown-list");
+        dropdownList.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
