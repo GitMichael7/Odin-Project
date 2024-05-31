@@ -2,6 +2,7 @@ class Chess {
   constructor() {
     this.square = [];
     this.edges = [];
+    this.adjacencyList = new Map(); // Initialize the adjacency list as a class property
   }
 
   createNodes() {
@@ -34,26 +35,67 @@ class Chess {
   }
 
   createAdjacencyList() {
-    const adjacencyList = new Map();
-
     // Add all nodes to the adjacency list
     this.square.forEach((square) => {
-      adjacencyList.set(square.toString(), []);
+      this.adjacencyList.set(square.toString(), []);
     });
 
     // Add edges to the adjacency list
     this.square.forEach((square, index) => {
       const edges = this.edges[index];
       edges.forEach((edge) => {
-        adjacencyList.get(square.toString()).push(edge.toString());
+        this.adjacencyList.get(square.toString()).push(edge.toString());
       });
     });
-    return adjacencyList;
+
+    console.log("Adjacency List:");
+    console.log(this.adjacencyList);
+  }
+
+  breadthFirstSearch(start, end) {
+    // Convert start and end to strings for consistency
+    const startString = start.toString();
+    const endString = end.toString();
+
+    const visited = new Set();
+    const queue = [startString];
+    const predecessors = new Map();
+
+    visited.add(startString);
+    predecessors.set(startString, null);
+
+    while (queue.length > 0) {
+      const square = queue.shift();
+
+      if (square === endString) {
+        console.log("found it");
+        // Reconstruct the path from end to start
+        const path = [];
+        let current = endString;
+        while (current !== null) {
+          path.unshift(current.split(",").map(Number)); // Convert string back to array of numbers
+          current = predecessors.get(current);
+        }
+        console.log("Fastest Path:", path);
+        return;
+      }
+
+      const edges = this.adjacencyList.get(square) || [];
+      for (const edge of edges) {
+        if (!visited.has(edge)) {
+          visited.add(edge);
+          queue.push(edge);
+          predecessors.set(edge, square);
+        }
+      }
+    }
+
+    console.log("not found");
   }
 }
 
 const board = new Chess();
 board.createNodes();
 board.createEdges();
-const adjacencyList = board.createAdjacencyList();
-console.log(adjacencyList);
+board.createAdjacencyList();
+board.breadthFirstSearch([0, 0], [7, 7]);
