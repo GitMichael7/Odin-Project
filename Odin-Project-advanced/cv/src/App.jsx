@@ -1,33 +1,63 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  //const [cv, setcv] = useState(0)
+  //onSubmit={handleSubmit}
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <form>
+        <div class="form-group">
+        <label for="name">Name: </label>
+          <input
+            name="name"
+            type="text"></input>
+          </div>
+          <div class="form-group">
+        <label for="email">Email: </label>
+          <input
+            name="email"
+            type="Email"></input>
+          </div>
+          <div class="form-group">
+        <label for="phone">Phone: </label>
+          <input
+            name="phone"
+            type="phone"></input>
+          </div>
+          <div class="form-group">
+        <label for="school">School: </label>
+          <input
+            name="school"
+            type="text"></input>
+          </div>
+          <div class="form-group">
+        <label for="title">Title: </label>
+          <input
+            name="title"
+            type="text"></input>
+          </div>
+          <div class="form-group">
+        <label for="date">Finished: </label>
+          <input
+            name="date"
+            type="date"></input>
+          </div>
+          <div class="form-group">
+        <label for="company">Company: </label>
+          <input
+            name="company"
+            type="text"></input>
+          </div>
+          <div class="form-group">
+        <label for="position">Position: </label>
+          <input
+            name="position"
+            type="text"></input>
+          </div>
+        <button type="submit">Submit</button>
+      </form>
     </>
   )
 }
