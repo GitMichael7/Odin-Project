@@ -10,10 +10,15 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <h1>404 Not Found</h1>,
   },
   {
-    path: "pages/shopping",
+    path: "/shopping",
     element: <Shopping />,
+  },
+  {
+    path: "/shoppingCart",
+    element: <ShoppingCart />,
   },
 ]);
 
