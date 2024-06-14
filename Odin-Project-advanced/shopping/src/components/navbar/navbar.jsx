@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./navbar.module.css"
+import {Link} from "react-router-dom"
 
 const Nav = () => {
 
@@ -8,12 +9,13 @@ const Nav = () => {
         <div class={styles.container}>
         <h2>Random Store</h2>
             <div class={styles.contain}>
-        <a href="" className={styles.link}>Home</a>
-        <a href="" className={styles.link}>Shopping</a>
-        <a href="" className={styles.link}>Cart</a>
+        <Link to="/home" className={styles.link}>Home</Link>
+        <Link to="/shopping" className={styles.link}>Shopping</Link>
+        <Link to="/shoppingCart" className={styles.link}>Cart</Link>
             </div>
         </div>
     )
 }
 
 export default Nav
+
