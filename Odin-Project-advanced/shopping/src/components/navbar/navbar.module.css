@@ -1,3 +1,24 @@
+
 .link {
-    color: green;
+    color: wheat;
+    margin: 20px;
+    align-items: center;
+ 
+}
+
+.container {
+    display: flex;
+    margin: 0px;
+    background-color: grey;
+    color: wheat;
+    justify-content: space-between;
+
+    
+}
+
+
+.contain {
+    align-items: center;
+    
+    display: flex;
 }

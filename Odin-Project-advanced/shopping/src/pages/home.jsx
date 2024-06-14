@@ -3,8 +3,8 @@ import Nav from "../components/navbar/navbar";
 
 const Home = () => {
     return (
-        <Nav></Nav>
-        
+        <><Nav></Nav>
+        <h1>This is Home</h1></>
     )
 }
 
