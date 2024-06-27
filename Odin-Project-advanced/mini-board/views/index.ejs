@@ -1,0 +1,22 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <h2>Messages</h2>
+    <ul>
+      <% messages.forEach(function(message) { %>
+      <li>
+        <strong><%= message.user %>:</strong> <%= message.text %>
+        <em>(<%= message.added.toDateString() %>)</em>
+      </li>
+      <% }); %>
+    </ul>
+    <a href="/new">Add a message</a>
+  </body>
+</html>
